@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DailyUp phase 2 #01</string>
+    <string name="enter_your_height_inches_and_weight_lbs_below">Enter your height (inches) and weight (lbs) below.</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="bmi">BMI:</string>
+    <string name="height">Height:</string>
+    <string name="weight">Weight:</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="inches">Inches</string>
+    <string name="pounds">Pounds</string>
+</resources>
