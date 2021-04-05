@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5f04f49-172f-4ca0-8cc0-87d56f09645d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DailyUp/app/src/main/res/values/ids.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/java/com/example/dailyup/BMICalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/java/com/example/dailyup/BMICalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/res/layout/activity_bmi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/res/layout/activity_bmi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qlZJoLE6gtZehyS5ut6IMZdlTF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DailyUp/app/src/main/res/values" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\josep\AndroidStudioProjects\Healthapp\DailyUp\app\src\main\res\values" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5f04f49-172f-4ca0-8cc0-87d56f09645d" name="Default Changelist" comment="" />
+      <created>1617656067588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617656067588</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="219" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617656234556">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="219" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1680.0.1680.1000/0.0.1536.824@0.0.1536.824" timestamp="1617656234556" />
+    <state x="164" y="112" width="1200" height="584" key="AVDManager" timestamp="1617656371934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="164" y="112" width="1200" height="584" key="AVDManager/-1680.0.1680.1000/0.0.1536.824@0.0.1536.824" timestamp="1617656371934" />
+    <state x="345" y="159" key="AndroidCreateResourceDirectoryDialog" timestamp="1617656320483">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="345" y="159" key="AndroidCreateResourceDirectoryDialog/-1680.0.1680.1000/0.0.1536.824@0.0.1536.824" timestamp="1617656320483" />
+    <state x="624" y="225" key="AndroidCreateXmlResourceDialog" timestamp="1617656366259">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="624" y="225" key="AndroidCreateXmlResourceDialog/-1680.0.1680.1000/0.0.1536.824@0.0.1536.824" timestamp="1617656366259" />
+  </component>
+</project>
