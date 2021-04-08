@@ -9,13 +9,17 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     Button bmiButton;
     Button plannerButton;
+    Button foodButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         bmiButton = (Button) findViewById(R.id.bmi);
         plannerButton = (Button) findViewById(R.id.planner);
+        foodButton = (Button) findViewById(R.id.diet);
+
         bmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
                 openPlanner();
             }
         });
+        foodButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDiet();
+            }
+        });
     }
 
     public void openBMI(){
@@ -37,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPlanner(){
         Intent intent = new Intent(this, WorkoutPlanner.class);
+        startActivity(intent);
+    }
+
+    public void openDiet(){
+        Intent intent = new Intent(this, DietPlanner.class);
         startActivity(intent);
     }
 }

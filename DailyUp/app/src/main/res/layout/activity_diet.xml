@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="17dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/calorieButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/ageDiet"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="Age:"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/genderDiet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightDiet" />
+
+    <TextView
+        android:id="@+id/activityDiet"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="16dp"
+        android:text="Activity:"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/calorieButton"
+        app:layout_constraintEnd_toStartOf="@+id/spinner1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderDiet" />
+
+    <TextView
+        android:id="@+id/genderDiet"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="Gender:"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/maleDiet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageDiet" />
+
+    <TextView
+        android:id="@+id/CalorieCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Calorie Calculator"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dietInstruc"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="34dp"
+        android:text="Enter your data below. Then click the button to calculate your estimated daily calorie intake!"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalorieCalc" />
+
+    <TextView
+        android:id="@+id/hieghtDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/height"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/editHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietInstruc" />
+
+    <TextView
+        android:id="@+id/weightDiet"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/editWeight"
+        app:layout_constraintTop_toBottomOf="@+id/hieghtDiet" />
+
+    <EditText
+        android:id="@+id/editHeight"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="91dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/inches"
+        android:inputType="number"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietInstruc"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="8dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/pounds"
+        android:inputType="number"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/editAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editHeight"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="78dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="number"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/genderDiet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ageDiet"
+        app:layout_constraintTop_toBottomOf="@+id/editWeight"
+        tools:ignore="LabelFor" />
+
+    <RadioButton
+        android:id="@+id/maleDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner1"
+        app:layout_constraintEnd_toStartOf="@+id/femaleDiet"
+        app:layout_constraintStart_toEndOf="@+id/genderDiet" />
+
+    <RadioButton
+        android:id="@+id/femaleDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Female"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maleDiet" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/calorieButton"
+        android:layout_width="215dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="92dp"
+        android:text="Calculate"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityDiet" />
+
+    <TextView
+        android:id="@+id/calorieStatus"
+        android:layout_width="203dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="38dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorieButton"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/statusDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="608dp"
+        android:layout_marginEnd="316dp"
+        android:text="STATUS:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
