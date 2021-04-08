@@ -87,7 +87,15 @@ public class DietPlanner extends AppCompatActivity {
 
     private String show_status(float calorie) {
 
-        String str = "Estimated daily calorie intake: " + calorie;
+        String new_cal = String.format("%.2f", calorie);
+        String half_cal = String.format("%.2f", calorie * .9);
+        String one_cal = String.format("%.2f", calorie * .8);
+        String two_cal = String.format("%.2f", calorie * .61);
+
+        String str = "Maintain weight: " + new_cal
+                + "\nLose 0.5 lbs a week: " + half_cal
+                + "\nLose 1 lb a week: " + one_cal
+                + "\nLose 2 lb a week: " + two_cal;
 
         str += "\n\nUse our workout planner for more advice on how to get in better shape!";
         return str;

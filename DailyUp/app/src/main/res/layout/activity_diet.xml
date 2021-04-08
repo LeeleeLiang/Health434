@@ -10,12 +10,12 @@
         android:id="@+id/spinner1"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginStart="186dp"
+        android:layout_marginTop="393dp"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/calorieButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ageDiet"
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="34dp"
-        android:text="Enter your data below. Then click the button to calculate your estimated daily calorie intake to maintain your weight!"
+        android:text="Enter your data below. Then click the button to calculate your estimated daily calorie intake!"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -191,27 +191,24 @@
     <Button
         android:id="@+id/calorieButton"
         android:layout_width="326dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="478dp"
-        android:layout_marginBottom="164dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="453dp"
+        android:layout_marginEnd="36dp"
         android:onClick="result_calorie"
         android:text="Calculate"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/calorieStatus"
-        android:layout_width="265dp"
-        android:layout_height="99dp"
+        android:layout_width="252dp"
+        android:layout_height="152dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="38dp"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calorieButton"
