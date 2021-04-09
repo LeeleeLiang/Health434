@@ -54,8 +54,9 @@
 
     <TextView
         android:id="@+id/recBMI"
-        android:layout_width="400dp"
-        android:layout_height="95dp"
+        android:layout_width="454dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="78dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="108dp"
         android:textColor="#000000"
@@ -63,12 +64,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toEndOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/extra"
         android:layout_width="410dp"
-        android:layout_height="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="16dp"
         android:textColor="#000000"
@@ -76,7 +79,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toEndOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/recBMI" />
 
     <TextView
         android:id="@+id/textView3"
