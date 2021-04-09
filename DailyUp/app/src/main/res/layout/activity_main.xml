@@ -15,7 +15,6 @@
         android:textStyle="bold|italic"
         android:textSize="40sp"
         android:textColor="@color/purple"
-        android:shadowColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintLeft_toLeftOf="parent"

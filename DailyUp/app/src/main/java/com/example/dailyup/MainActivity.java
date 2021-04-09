@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //on click listener for buttons
         bmiButton = (Button) findViewById(R.id.bmi);
         plannerButton = (Button) findViewById(R.id.planner);
         foodButton = (Button) findViewById(R.id.diet);
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //functions to start new activities
     public void openBMI(){
         Intent intent = new Intent(this, BMICalculator.class);
         startActivity(intent);

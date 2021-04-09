@@ -1,8 +1,11 @@
 package com.example.dailyup;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,7 +21,7 @@ public class BMICalculator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bmi);
+        setContentView(R.layout.bmi_result);
 
         height = (EditText) findViewById(R.id.editTextHeight);
         weight = (EditText) findViewById(R.id.editTextWeight);
@@ -60,6 +63,7 @@ public class BMICalculator extends AppCompatActivity {
     }
 
     public void result_bmi(View v) {
+        reveal();
         String curr_height = height.getText().toString();
         String curr_weight = weight.getText().toString();
         String bmi_status = "";
@@ -73,6 +77,33 @@ public class BMICalculator extends AppCompatActivity {
             bmi_status = show_status(bmi);
             bmi_result.setText(bmi_status);
         }
+    }
+
+    public void reveal() {
+        // previously visible view
+        final View myView = findViewById(R.id.chart);
+
+            // get the center for the clipping circle
+            int cx = myView.getWidth() / 2;
+            int cy = myView.getHeight() / 2;
+
+            // get the initial radius for the clipping circle
+            float initialRadius = (float) Math.hypot(cx, cy);
+
+            // create the animation (the final radius is zero)
+            Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0f);
+
+            // make the view invisible when the animation is done
+            anim.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    super.onAnimationEnd(animation);
+                    myView.setVisibility(View.INVISIBLE);
+                }
+            });
+
+            // start the animation
+            anim.start();
     }
 
 }

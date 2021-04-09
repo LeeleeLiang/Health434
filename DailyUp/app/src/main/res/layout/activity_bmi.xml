@@ -52,26 +52,26 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="272dp"
+        android:layout_height="56dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="29dp"
         android:text="@string/bmi_calculator"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        android:textStyle="bold"
+        android:textColor="@color/purple"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="199dp"
+        android:layout_height="48dp"
         android:layout_marginStart="65dp"
         android:text="@string/height"
         android:textColor="#000000"
@@ -79,7 +79,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/editTextHeight"
         app:layout_constraintEnd_toStartOf="@+id/editTextHeight"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextHeight" />
+        app:layout_constraintTop_toTopOf="@+id/editTextHeight"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView2"
@@ -132,14 +133,16 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="53dp"
         android:layout_marginStart="43dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="@+id/calc_btn"
-        app:layout_constraintEnd_toStartOf="@+id/calc_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/calc_btn"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/calc2" />
 
     <TextView
@@ -152,6 +155,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextHeight"
         app:layout_constraintEnd_toStartOf="@+id/editTextHeight"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="@+id/editTextHeight"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
