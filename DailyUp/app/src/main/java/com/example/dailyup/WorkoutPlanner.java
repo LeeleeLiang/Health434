@@ -34,7 +34,7 @@ public class WorkoutPlanner extends AppCompatActivity {
         process();
         notificationsViewModel =
                 new ViewModelProvider(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        View root = inflater.inflate(R.layout.activity_planner, container, false);
 
         final TextView minute = root.findViewById(R.id.et_minute);
         final TextView muscle1 = root.findViewById(R.id.et_muscle1);
