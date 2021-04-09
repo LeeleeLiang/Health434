@@ -20,6 +20,8 @@ public class DietPlanner extends AppCompatActivity {
     private EditText age;
     private String exercise;
     private String gender;
+    private TextView extra;
+    private TextView lose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class DietPlanner extends AppCompatActivity {
         weight = (EditText) findViewById(R.id.editWeight);
         age = (EditText) findViewById(R.id.editAge);
         calorie_result = (TextView) findViewById(R.id.calorieStatus);
+        extra = (TextView) findViewById(R.id.extraDiet);
+        lose = (TextView) findViewById(R.id.loseWeight);
 
         Spinner dropdown = findViewById(R.id.spinner1);
         String[] activity = new String[]{"No exercise", "Exercise 1-3 times a week",
@@ -88,16 +92,21 @@ public class DietPlanner extends AppCompatActivity {
     private String show_status(float calorie) {
 
         String new_cal = String.format("%.2f", calorie);
+
+        String str = "Maintain weight: " + new_cal;
+
+        return str;
+    }
+
+    private String show_loss(float calorie) {
         String half_cal = String.format("%.2f", calorie * .9);
         String one_cal = String.format("%.2f", calorie * .8);
         String two_cal = String.format("%.2f", calorie * .61);
 
-        String str = "Maintain weight: " + new_cal
-                + "\nLose 0.5 lbs a week: " + half_cal
+        String str = "Lose 0.5 lbs a week: " + half_cal
                 + "\nLose 1 lb a week: " + one_cal
                 + "\nLose 2 lb a week: " + two_cal;
 
-        str += "\n\nUse our workout planner for more advice on how to get in better shape!";
         return str;
     }
 
@@ -106,6 +115,7 @@ public class DietPlanner extends AppCompatActivity {
         String curr_weight = weight.getText().toString();
         String curr_age = age.getText().toString();
         String calorie_status = "";
+        String loss_status = "";
         float calorie = 0;
 
         if (curr_height.length() > 0 && curr_height != null && curr_weight.length() > 0 && curr_weight != null &&
@@ -156,7 +166,11 @@ public class DietPlanner extends AppCompatActivity {
             }
 
             calorie_status = show_status(calorie);
+            loss_status = show_loss(calorie);
+
             calorie_result.setText(calorie_status);
+            lose.setText(loss_status);
+            extra.setText(R.string.extra);
         }
     }
 

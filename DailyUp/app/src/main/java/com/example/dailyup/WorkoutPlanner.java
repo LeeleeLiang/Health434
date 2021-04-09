@@ -24,7 +24,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WorkoutPlanner extends Fragment {
+public class WorkoutPlanner extends AppCompatActivity {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_planner);
+    }
+}
+
+/**public class WorkoutPlanner extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
     Map<String, List<String>> map = new HashMap<>();
@@ -1008,3 +1015,4 @@ public class WorkoutPlanner extends Fragment {
             "zottman curl, biceps\n" +
             "zottman preacher curl, biceps";
 }
+**/

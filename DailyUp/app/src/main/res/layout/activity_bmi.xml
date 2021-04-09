@@ -40,14 +40,42 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="173dp"
+        android:layout_width="395dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="463dp"
+        android:layout_marginBottom="205dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recBMI"
+        android:layout_width="400dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="108dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/extra"
+        android:layout_width="410dp"
+        android:layout_height="32dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="16dp"
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <TextView

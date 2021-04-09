@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/myLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <Spinner
         android:id="@+id/spinner1"
@@ -202,24 +202,47 @@
 
     <TextView
         android:id="@+id/calorieStatus"
-        android:layout_width="252dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="38dp"
+        android:layout_width="292dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="512dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loseWeight"
+        android:layout_width="379dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="552dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/extraDiet"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calorieButton"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loseWeight"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/statusDiet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="568dp"
-        android:layout_marginEnd="312dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="300dp"
         android:text="STATUS:"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
