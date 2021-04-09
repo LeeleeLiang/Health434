@@ -1,4 +1,4 @@
-package com.example.dailyup.ui.notifications;
+package com.example.dailyup;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
