@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WorkoutPlanner extends AppCompatActivity {
+public class WorkoutPlanner extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
     Map<String, List<String>> map = new HashMap<>();
