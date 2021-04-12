@@ -10,8 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
-import com.jjoe64.graphview.series.LineGraphSeries;
+import com.jjoe64.graphview.series.PointsGraphSeries;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public class BmiGraph extends AppCompatActivity {
     public static final String SHARED_PREFS = "sharedPrefs";
     //private boolean switchOnOff;
 
-    LineGraphSeries<DataPoint> bmiTimeGraph;
+    PointsGraphSeries<DataPoint> bmiTimeGraph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +63,13 @@ public class BmiGraph extends AppCompatActivity {
             String appendValue = value + "\n" + savedBMI;
             editor.putString("bmi", appendValue);
             editor.apply();
-            bmiData.setText(appendValue);
+            //bmiData.setText("BMI values:\n" + appendValue);
             bmi_values = appendValue.split("\\s+");
         }
         else {
             editor.putString("bmi", savedBMI);
             editor.apply();
-            bmiData.setText(savedBMI);
+            //bmiData.setText("BMI values:\n" + savedBMI);
             bmi_values = savedBMI.split(" ");
         }
 
@@ -76,7 +77,7 @@ public class BmiGraph extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 editor.remove("bmi").apply();
-                bmiData.setText("");
+                //bmiData.setText("");
             }
         });
 
@@ -100,7 +101,7 @@ public class BmiGraph extends AppCompatActivity {
         double x, y;
         x = 0;
         GraphView graph = (GraphView) findViewById(R.id.bmiOverTime);
-        bmiTimeGraph = new LineGraphSeries<DataPoint>();
+        bmiTimeGraph = new PointsGraphSeries<DataPoint>();
         for(int i = 0; i < bmiArray.size(); i++) {
             y = bmiArray.get(i);
             bmiTimeGraph.appendData(new DataPoint(x, y), true, 500);
@@ -116,5 +117,13 @@ public class BmiGraph extends AppCompatActivity {
         graph.getViewport().setYAxisBoundsManual(true);
         graph.getViewport().setXAxisBoundsManual(true);
 
+        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+        gridLabel.setHorizontalAxisTitle("Entry Number");
+        gridLabel.setHorizontalAxisTitleTextSize(100);
+        gridLabel.setVerticalAxisTitle("BMI");
+        gridLabel.setVerticalAxisTitleTextSize(100);
+
+        graph.setTitle("BMI over time");
+        graph.setTitleTextSize(150);
     }
 }

@@ -20,7 +20,7 @@ public class BMICalculator extends AppCompatActivity {
     private TextView recommend;
     private TextView extra;
     private Button saveButton;
-    private int savedBMI;
+    private float savedBMI;
 
     //private Switch saveSwitch;
 
@@ -162,7 +162,7 @@ public class BMICalculator extends AppCompatActivity {
             bmi_status = show_status(bmi);
             rec_status = show_rec(bmi);
 
-            savedBMI = (int) bmi;
+            savedBMI = bmi;
 
             bmi_result.setText(bmi_status);
             recommend.setText(rec_status);
