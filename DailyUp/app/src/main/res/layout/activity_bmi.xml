@@ -7,6 +7,16 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="536dp"
+        android:text="Save BMI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/calc_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

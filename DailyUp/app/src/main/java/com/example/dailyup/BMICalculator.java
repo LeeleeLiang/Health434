@@ -2,17 +2,15 @@ package com.example.dailyup;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewAnimationUtils;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.w3c.dom.Text;
 
 public class BMICalculator extends AppCompatActivity {
 
@@ -21,6 +19,16 @@ public class BMICalculator extends AppCompatActivity {
     private TextView bmi_result;
     private TextView recommend;
     private TextView extra;
+    private Button saveButton;
+    private int savedBMI;
+
+    //private Switch saveSwitch;
+
+
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String BMI = "bmi";
+
+    private boolean switchOnOff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +40,50 @@ public class BMICalculator extends AppCompatActivity {
         bmi_result = (TextView) findViewById(R.id.textView6);
         recommend = (TextView) findViewById(R.id.recBMI);
         extra = (TextView) findViewById(R.id.extra);
+        saveButton = (Button) findViewById(R.id.saveButton);
+        //saveSwitch = (Switch) findViewById(R.id.saveSwitch);
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //openGraph();
+                //saveData();
+                Intent intent = new Intent(getApplicationContext(), BmiGraph.class);
+                intent.putExtra("bmi", String.valueOf(savedBMI));
+                startActivity(intent);
+            }
+        });
     }
+
+    /**public void openGraph(){
+        Intent intent = new Intent(this, BmiGraph.class);
+        startActivity(intent);
+    }**/
+
+    /**public void saveData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
+        editor.putString("bmi", bmi_result.getText().toString());
+       // editor.putBoolean("saveSwitch", saveSwitch.isChecked());
+
+        editor.apply();
+
+        Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show();
+
+
+       /** SharedPreferences sharedPreferences =
+                this.getSharedPreferences("com.example.dailyup", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        int temp_bmi = Integer.parseInt(bmi_result.getText().toString());
+        editor.putInt(BMI, temp_bmi);
+        editor.commit();
+
+        editor.apply();
+        Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT);
+    } **/
 
     private String show_rec(float bmi) {
 
@@ -42,11 +93,11 @@ public class BMICalculator extends AppCompatActivity {
             str = "Recommendations:\n-Do physical activity for 30 minutes 3 times a week."
                     + "\n-Each nutritious meals 3 times a day.\n-See a doctor if lost more than 10 pounds of your body weight in the last year or less";
         }
-        else if(Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 19f) <= 0) {
+        else if(Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 18.5f) <= 0) {
             str = "Recommendations:\n-Eat more frequently\nTry nutrient-rich smoothies"
                     + "\n-Exercise a few times a week.";
         }
-        else if(Float.compare(bmi, 19f) > 0 && Float.compare(bmi, 24f) <= 0) {
+        else if(Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 24f) <= 0) {
             str = "Recommendations:\n-Keep doing your normal routine, you're Healthy!";
         }
         else if(Float.compare(bmi, 24f) > 0 &&Float.compare(bmi, 29f) <= 0) {
@@ -111,9 +162,12 @@ public class BMICalculator extends AppCompatActivity {
             bmi_status = show_status(bmi);
             rec_status = show_rec(bmi);
 
+            savedBMI = (int) bmi;
+
             bmi_result.setText(bmi_status);
             recommend.setText(rec_status);
             extra.setText(R.string.extra);
+
         }
     }
 
