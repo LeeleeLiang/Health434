@@ -1,22 +1,10 @@
 package com.example.dailyup;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
-import com.example.dailyup.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,34 +13,23 @@ import java.util.List;
 import java.util.Map;
 
 public class WorkoutPlanner extends AppCompatActivity {
+    Map<String, List<String>> map = new HashMap<>();
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
-    }
-}
-
-/**public class WorkoutPlanner extends Fragment {
-
-    private NotificationsViewModel notificationsViewModel;
-    Map<String, List<String>> map = new HashMap<>();
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
         process();
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.activity_planner, container, false);
 
-        final TextView minute = root.findViewById(R.id.et_minute);
-        final TextView muscle1 = root.findViewById(R.id.et_muscle1);
-        final TextView muscle2 = root.findViewById(R.id.et_muscle2);
-        final TextView muscle3 = root.findViewById(R.id.et_muscle3);
-        final TextView textView = root.findViewById(R.id.text_notifications);
+        final TextView minute = findViewById(R.id.et_minute);
+        final TextView muscle1 = findViewById(R.id.et_muscle1);
+        final TextView muscle2 = findViewById(R.id.et_muscle2);
+        final TextView muscle3 = findViewById(R.id.et_muscle3);
+        final TextView textView = findViewById(R.id.text_notifications);
 
-        final Button start = root.findViewById(R.id.button_start_exercise);
+        final Button start = findViewById(R.id.button_start_exercise);
         start.setOnClickListener(view -> {
 
-            Log.i("Qiuqi", "onCreateView: "+minute.getText());
             String muscle1Text = muscle1.getText().toString();
             String muscle2Text = muscle2.getText().toString();
             String muscle3Text = muscle3.getText().toString();
@@ -61,32 +38,24 @@ public class WorkoutPlanner extends AppCompatActivity {
             String action2 = getRandomAction(muscle2Text);
             String action3 = getRandomAction(muscle3Text);
 
-            int muscleSize = 0; 
+            int muscleSize = 0; // 计算用户选了几项
             if(action1 != null) muscleSize ++;
             if(action2 != null) muscleSize ++;
             if(action3 != null) muscleSize ++;
 
-            int cost = Integer.parseInt(minute.getText().toString())/muscleSize;
-
             String desc = "";
-            if(action1 != null) desc += action1 +":"+cost+" min \n";
-            if(action2 != null) desc += action2 +":"+cost+" min \n";
-            if(action3 != null) desc += action3 +":"+cost+" min \n";
+            if(muscleSize == 0){
+                desc = "Enter at least one Muscle~";
+            }else{
+                int cost = Integer.parseInt(minute.getText().toString())/muscleSize;
+                if(action1 != null) desc += action1 +":"+cost+" min \n";
+                if(action2 != null) desc += action2 +":"+cost+" min \n";
+                if(action3 != null) desc += action3 +":"+cost+" min \n";
+            }
+
             textView.setText(desc);
         });
-
-
-
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
     }
-
-
 
     private String getRandomAction(String muscle){
         List<String> actions = map.get(muscle);
@@ -97,7 +66,7 @@ public class WorkoutPlanner extends AppCompatActivity {
         return actions.get(0);
     }
 
-    
+    // 解析数据
     private void process(){
         String[] split = db.split("\n");
         for (String line : split) {
@@ -1015,4 +984,3 @@ public class WorkoutPlanner extends AppCompatActivity {
             "zottman curl, biceps\n" +
             "zottman preacher curl, biceps";
 }
-**/
