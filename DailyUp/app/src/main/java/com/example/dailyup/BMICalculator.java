@@ -21,10 +21,12 @@ public class BMICalculator extends AppCompatActivity {
     private TextView recommend;
     private TextView extra;
     private Button saveButton;
+    private Button openButton;
     private float savedBMI;
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String BMI = "bmi";
+    public static boolean valueHere = false;
 
     private boolean switchOnOff;
 
@@ -40,24 +42,32 @@ public class BMICalculator extends AppCompatActivity {
         recommend = (TextView) findViewById(R.id.recBMI);
         extra = (TextView) findViewById(R.id.extra);
         saveButton = (Button) findViewById(R.id.saveButton);
+        openButton = (Button) findViewById(R.id.openGraph);
         //saveSwitch = (Switch) findViewById(R.id.saveSwitch);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //openGraph();
-                //saveData();
-                Intent intent = new Intent(getApplicationContext(), BmiGraph.class);
-                intent.putExtra("bmi", String.valueOf(savedBMI));
-                startActivity(intent);
+                valueHere = true;
+                openGraph();
+            }
+        });
+
+        openButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                valueHere = false;
+                openGraph();
             }
         });
     }
 
-    /**public void openGraph(){
-        Intent intent = new Intent(this, BmiGraph.class);
+    public void openGraph(){
+        Intent intent = new Intent(getApplicationContext(), BmiGraph.class);
+        intent.putExtra("bmi", String.valueOf(savedBMI));
         startActivity(intent);
-    }**/
+    }
 
     /**public void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);

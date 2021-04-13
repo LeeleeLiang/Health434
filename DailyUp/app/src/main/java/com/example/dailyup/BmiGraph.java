@@ -62,20 +62,6 @@ public class BmiGraph extends AppCompatActivity {
         SharedPreferences.Editor editor = settings.edit();
         value = settings.getString("bmi", "");
 
-        if (value.length() != 0) {
-            String appendValue = value + "\n" + savedBMI;
-            editor.putString("bmi", appendValue);
-            editor.apply();
-            //bmiData.setText("BMI values:\n" + appendValue);
-            bmi_values = appendValue.split("\\s+");
-        }
-        else {
-            editor.putString("bmi", savedBMI);
-            editor.apply();
-            //bmiData.setText("BMI values:\n" + savedBMI);
-            bmi_values = savedBMI.split(" ");
-        }
-
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,22 +78,47 @@ public class BmiGraph extends AppCompatActivity {
             }
         });
 
+        if(BMICalculator.valueHere == true) {
+
+            if (value.length() != 0) {
+                String appendValue = value + "\n" + savedBMI;
+                editor.putString("bmi", appendValue);
+                editor.apply();
+                //bmiData.setText("BMI values:\n" + appendValue);
+                bmi_values = appendValue.split("\\s+");
+            } else {
+                editor.putString("bmi", savedBMI);
+                editor.apply();
+                //bmiData.setText("BMI values:\n" + savedBMI);
+                bmi_values = savedBMI.split(" ");
+            }
+        }
+        else {
+            bmi_values = value.split("\\s+");
+        }
 
         Double temp;
 
-        for(int i = 0; i < bmi_values.length; i++) {
 
-            temp = Double.valueOf(bmi_values[i]);
-            bmiArray.add(temp);
+        for (int i = 0; i < bmi_values.length; i++) {
+            if (bmi_values[i] != null && bmi_values[i].length() > 0) {
+                try {
+                    temp = Double.valueOf(bmi_values[i]);
+                    bmiArray.add(temp);
+                } catch (Exception e) {
+
+                }
+            }
 
         }
 
-        /**for(int i = 0; i < bmiArray.size(); i++) {
-            bmiCat += (bmiArray.get(i).toString());
-            bmiCat += ("\n");
-        }
 
-        bmiData.setText(bmiCat);**/
+            /**for(int i = 0; i < bmiArray.size(); i++) {
+             bmiCat += (bmiArray.get(i).toString());
+             bmiCat += ("\n");
+             }
+
+             bmiData.setText(bmiCat);**/
 
         double x, y;
         x = 0;
