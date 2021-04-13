@@ -26,6 +26,7 @@ public class BmiGraph extends AppCompatActivity {
     private String value;
     private Button clearButton;
     private String[] bmi_values;
+    private Button returnButton;
 
     public static final String SHARED_PREFS = "sharedPrefs";
     //private boolean switchOnOff;
@@ -39,6 +40,8 @@ public class BmiGraph extends AppCompatActivity {
 
         bmiData = (TextView) findViewById(R.id.bmiData);
         clearButton = (Button) findViewById(R.id.clearButton);
+        returnButton = (Button) findViewById(R.id.returnButton);
+
 
         Intent intent = getIntent();
         String savedBMI = intent.getStringExtra("bmi");
@@ -78,6 +81,14 @@ public class BmiGraph extends AppCompatActivity {
             public void onClick(View v) {
                 editor.remove("bmi").apply();
                 //bmiData.setText("");
+                openCalc();
+            }
+        });
+
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCalc();
             }
         });
 
@@ -125,5 +136,10 @@ public class BmiGraph extends AppCompatActivity {
 
         graph.setTitle("BMI over time");
         graph.setTitleTextSize(150);
+    }
+
+    public void openCalc(){
+        Intent intent = new Intent(this, BMICalculator.class);
+        startActivity(intent);
     }
 }

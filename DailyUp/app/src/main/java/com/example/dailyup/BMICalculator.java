@@ -14,16 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class BMICalculator extends AppCompatActivity {
 
-    private EditText height;
+    private EditText feet;
+    private EditText inches;
     private EditText weight;
     private TextView bmi_result;
     private TextView recommend;
     private TextView extra;
     private Button saveButton;
     private float savedBMI;
-
-    //private Switch saveSwitch;
-
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String BMI = "bmi";
@@ -35,7 +33,8 @@ public class BMICalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bmi_result);
 
-        height = (EditText) findViewById(R.id.editTextHeight);
+        feet = (EditText) findViewById(R.id.editTextHeight);
+        inches = (EditText) findViewById(R.id.editTextHeight2);
         weight = (EditText) findViewById(R.id.editTextWeight);
         bmi_result = (TextView) findViewById(R.id.textView6);
         recommend = (TextView) findViewById(R.id.recBMI);
@@ -148,14 +147,19 @@ public class BMICalculator extends AppCompatActivity {
 
     public void result_bmi(View v) {
         reveal();
-        String curr_height = height.getText().toString();
+        String curr_feet = feet.getText().toString();
+        String curr_inches = inches.getText().toString();
         String curr_weight = weight.getText().toString();
         String bmi_status = "";
         String rec_status = "";
 
-        if (curr_height.length() > 0 && curr_height != null && curr_weight.length() > 0 && curr_weight != null) {
-            float height_float = Float.parseFloat(curr_height);
+        if (curr_feet.length() > 0 && curr_feet != null && curr_weight.length() > 0 && curr_weight != null
+        && curr_inches.length() > 0 && curr_inches != null) {
+            float feet_float = Float.parseFloat(curr_feet);
+            float inches_float = Float.parseFloat(curr_inches);
             float weight_float = Float.parseFloat(curr_weight);
+
+            float height_float = (feet_float * 12) + inches_float;
 
             float bmi = weight_float / (height_float * height_float) * 703;
 
