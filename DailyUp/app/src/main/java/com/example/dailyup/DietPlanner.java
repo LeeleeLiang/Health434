@@ -1,20 +1,19 @@
 package com.example.dailyup;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.util.Log;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class DietPlanner extends AppCompatActivity {
 
-    private EditText height;
+    private EditText feet;
     private EditText weight;
     private TextView calorie_result;
     private EditText age;
@@ -22,13 +21,15 @@ public class DietPlanner extends AppCompatActivity {
     private String gender;
     private TextView extra;
     private TextView lose;
+    private EditText inches;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet);
 
-        height = (EditText) findViewById(R.id.editHeight);
+        feet = (EditText) findViewById(R.id.editHeight);
+        inches = (EditText) findViewById(R.id.editHeight2);
         weight = (EditText) findViewById(R.id.editWeight);
         age = (EditText) findViewById(R.id.editAge);
         calorie_result = (TextView) findViewById(R.id.calorieStatus);
@@ -111,23 +112,26 @@ public class DietPlanner extends AppCompatActivity {
     }
 
     public void result_calorie(View v) {
-        String curr_height = height.getText().toString();
+        String curr_feet = feet.getText().toString();
+        String curr_inches = inches.getText().toString();
         String curr_weight = weight.getText().toString();
         String curr_age = age.getText().toString();
         String calorie_status = "";
         String loss_status = "";
         float calorie = 0;
 
-        if (curr_height.length() > 0 && curr_height != null && curr_weight.length() > 0 && curr_weight != null &&
+        if (curr_feet.length() > 0 && curr_feet != null && curr_weight.length() > 0 && curr_weight != null &&
         curr_age.length() > 0 && curr_age != null && exercise.length() > 0 && exercise != null
-        && gender.length() > 0 && gender != null) {
-            float height_float = Float.parseFloat(curr_height);
+        && gender.length() > 0 && gender != null && curr_inches.length() > 0 && curr_inches != null) {
+            float feet_float = Float.parseFloat(curr_feet);
+            float inches_float = Float.parseFloat(curr_inches);
             float weight_float = Float.parseFloat(curr_weight);
             float age_float = Float.parseFloat(curr_age);
             float bmr;
             float w = 0;
             float h = 0;
             float a = 0;
+            float height_float = (12 * feet_float) + inches_float;
 
             if (gender.equals("male")) {
                 w = (float) (6.3 * weight_float);

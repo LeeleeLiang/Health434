@@ -117,6 +117,22 @@
         android:autofillHints=""
         android:background="#FFFFFF"
         android:ems="10"
+        android:hint="Feet"
+        android:inputType="number"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietInstruc"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editHeight2"
+        android:layout_width="118dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
         android:hint="@string/inches"
         android:inputType="number"
         android:textSize="40sp"
