@@ -184,7 +184,7 @@ public class BMICalculator extends AppCompatActivity {
 
         }
         else {
-            bmi_result.setText("BMI unable to be calculated");
+            bmi_result.setText("BMI unable to be calculated.");
             extra.setText(R.string.extra);
         }
     }

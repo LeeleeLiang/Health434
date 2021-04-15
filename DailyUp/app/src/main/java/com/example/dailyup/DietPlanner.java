@@ -177,7 +177,7 @@ public class DietPlanner extends AppCompatActivity {
             extra.setText(R.string.extra);
         }
         else {
-            calorie_result.setText("BMI unable to be calculated");
+            calorie_result.setText("Calorie intake estimation unable to be calculated.");
             extra.setText(R.string.extra);
         }
     }
