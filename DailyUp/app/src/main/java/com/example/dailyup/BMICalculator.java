@@ -183,6 +183,10 @@ public class BMICalculator extends AppCompatActivity {
             extra.setText(R.string.extra);
 
         }
+        else {
+            bmi_result.setText("BMI unable to be calculated");
+            extra.setText(R.string.extra);
+        }
     }
 
     public void reveal() {
