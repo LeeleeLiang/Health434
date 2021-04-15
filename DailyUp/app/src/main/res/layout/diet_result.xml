@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/back_top"
+        app:layout_constraintBottom_toBottomOf="@id/dietInstruc"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/CalorieCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calorie Intake"
+        android:textColor="@color/purple"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/myRectangleView"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <TextView
+        android:id="@+id/dietInstruc"
+        android:layout_width="349dp"
+        android:layout_height="58dp"
+        android:text="Enter your data below. Then click the button to calculate your estimated daily calorie intake!"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/CalorieCalc"
+        app:layout_constraintTop_toBottomOf="@+id/CalorieCalc" />
+
+    <View
+        android:id="@+id/calc"
+        android:layout_width="78dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="@dimen/default_gap"
+        android:layout_marginEnd="@dimen/default_gap"
+        android:background="@drawable/create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/height"
+        android:textColor="@color/purple"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/line"
+        app:layout_constraintTop_toBottomOf="@id/myRectangleView" />
+
+    <View
+        android:id="@+id/height"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/height"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toStartOf="@id/textView"
+        app:layout_constraintTop_toTopOf="@id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds,MissingConstraints,UnknownId"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/weight"
+        android:textColor="@color/purple"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/ageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Age:"
+        android:textColor="@color/purple"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <TextView
+        android:id="@+id/genderView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Gender:"
+        android:textColor="@color/purple"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/ageView" />
+
+    <TextView
+        android:id="@+id/actView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Activity:"
+        android:textColor="@color/purple"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/genderView" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple"
+        app:layout_constraintTop_toBottomOf="@id/ageView"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple"
+        app:layout_constraintTop_toBottomOf="@id/genderView"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple"
+        app:layout_constraintTop_toBottomOf="@id/actView"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/pic2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/weight"
+        app:layout_constraintBottom_toBottomOf="@id/textView2"
+        app:layout_constraintEnd_toStartOf="@id/textView2"
+        app:layout_constraintTop_toTopOf="@id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds,MissingConstraints,UnknownId"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <View
+        android:id="@+id/pic2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/clock"
+        app:layout_constraintBottom_toBottomOf="@id/ageView"
+        app:layout_constraintEnd_toStartOf="@id/ageView"
+        app:layout_constraintTop_toTopOf="@id/ageView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds,MissingConstraints,UnknownId"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <View
+        android:id="@+id/pic2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/gender"
+        app:layout_constraintBottom_toBottomOf="@id/genderView"
+        app:layout_constraintEnd_toStartOf="@id/genderView"
+        app:layout_constraintTop_toTopOf="@id/genderView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds,MissingConstraints,UnknownId"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <View
+        android:id="@+id/pic2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/exercise"
+        app:layout_constraintBottom_toBottomOf="@id/actView"
+        app:layout_constraintEnd_toStartOf="@id/actView"
+        app:layout_constraintTop_toTopOf="@id/actView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds,MissingConstraints,UnknownId"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/editHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_gap"
+        android:hint="Feet"
+        android:inputType="number"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/line"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toTopOf="@id/textView"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editHeight2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:hint="@string/inches"
+        android:inputType="number"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/line"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toTopOf="@id/textView"
+        app:layout_constraintVertical_bias="0.523"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/pounds"
+        android:inputType="number"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        app:layout_constraintStart_toStartOf="@id/editHeight"
+        app:layout_constraintTop_toTopOf="@id/textView2"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Number"
+        android:inputType="number"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/line3"
+        app:layout_constraintStart_toStartOf="@id/editWeight"
+        app:layout_constraintTop_toTopOf="@id/ageView"
+        tools:ignore="LabelFor" />
+
+    <RadioButton
+        android:id="@+id/maleDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onRadioButtonClicked"
+        android:text="Male"
+        android:textColor="@color/purple"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        app:layout_constraintEnd_toStartOf="@+id/femaleDiet"
+        app:layout_constraintStart_toEndOf="@+id/genderView" />
+
+    <RadioButton
+        android:id="@+id/femaleDiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="Female"
+        android:textSize="25sp"
+        android:textColor="@color/purple"
+        app:layout_constraintBottom_toTopOf="@+id/line4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maleDiet" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="199dp"
+        android:layout_height="35dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@id/actView"
+        app:layout_constraintTop_toTopOf="@id/actView"
+        app:layout_constraintBottom_toTopOf="@id/line5"/>
+
+    <Button
+        android:id="@+id/calorieButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/purple"
+        android:elevation="5dp"
+        android:onClick="result_calorie"
+        android:text="CALCULATE CALORIE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/line"
+        app:layout_constraintStart_toStartOf="@id/pic2"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/calorieStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/default_gap"
+        android:layout_marginStart="@dimen/default_gap"
+        app:layout_constraintTop_toBottomOf="@id/calorieButton"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/loseWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="@dimen/default_gap"
+        app:layout_constraintTop_toBottomOf="@id/calorieStatus"
+        app:layout_constraintStart_toStartOf="@id/calorieStatus"/>
+
+    <TextView
+        android:id="@+id/extraDiet"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loseWeight"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

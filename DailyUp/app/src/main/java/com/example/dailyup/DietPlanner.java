@@ -26,7 +26,7 @@ public class DietPlanner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diet);
+        setContentView(R.layout.diet_result);
 
         feet = (EditText) findViewById(R.id.editHeight);
         inches = (EditText) findViewById(R.id.editHeight2);
