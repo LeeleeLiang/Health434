@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button bmiButton;
     Button plannerButton;
     Button foodButton;
+    Button calenderButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         bmiButton = (Button) findViewById(R.id.bmi);
         plannerButton = (Button) findViewById(R.id.planner);
         foodButton = (Button) findViewById(R.id.diet);
+        calenderButton = (Button) findViewById(R.id.calender_btn);
 
         bmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
                 openDiet();
             }
         });
+        calenderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCalender();
+            }
+        });
     }
 
     //functions to start new activities
@@ -56,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openDiet(){
         Intent intent = new Intent(this, DietPlanner.class);
+        startActivity(intent);
+    }
+
+    public void openCalender(){
+        Intent intent = new Intent(this, calender_class.class);
         startActivity(intent);
     }
 }
