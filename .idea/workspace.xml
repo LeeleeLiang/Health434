@@ -25,10 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5f04f49-172f-4ca0-8cc0-87d56f09645d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DailyUp/app/src/main/res/values/ids.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/java/com/example/dailyup/BMICalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/java/com/example/dailyup/BMICalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/res/layout/activity_bmi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/res/layout/activity_bmi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/java/com/example/dailyup/calender_class.java" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/java/com/example/dailyup/calender_class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyUp/app/src/main/res/layout/calender_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DailyUp/app/src/main/res/layout/calender_view.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DailyUp/app/src/main/res/values" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DailyUp" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
@@ -96,5 +95,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="624" y="225" key="AndroidCreateXmlResourceDialog/-1680.0.1680.1000/0.0.1536.824@0.0.1536.824" timestamp="1617656366259" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1618766590826">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1618766590826" />
   </component>
 </project>
