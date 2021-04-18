@@ -121,7 +121,7 @@ public class BmiGraph extends AppCompatActivity {
              bmiData.setText(bmiCat);**/
 
         double x, y;
-        x = 0;
+        x = 1;
         GraphView graph = (GraphView) findViewById(R.id.bmiOverTime);
         bmiTimeGraph = new PointsGraphSeries<DataPoint>();
         for(int i = 0; i < bmiArray.size(); i++) {
@@ -131,7 +131,7 @@ public class BmiGraph extends AppCompatActivity {
         }
         graph.addSeries(bmiTimeGraph);
 
-        graph.getViewport().setMinX(0);
+        graph.getViewport().setMinX(1);
         graph.getViewport().setMaxX(bmiArray.size() + 1);
         graph.getViewport().setMinY(0);
         graph.getViewport().setMaxY(100);

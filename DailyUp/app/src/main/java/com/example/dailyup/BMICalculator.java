@@ -132,10 +132,10 @@ public class BMICalculator extends AppCompatActivity {
         if(Float.compare(bmi, 15f) <= 0) {
             str = "BMI: " + bmi + "\nCRITICALLY UNDERWEIGHT";
         }
-        else if(Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 19f) <= 0) {
+        else if(Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 18.5f) <= 0) {
             str = "BMI: " + bmi + "\nUNDERWEIGHT";
         }
-        else if(Float.compare(bmi, 19f) > 0 && Float.compare(bmi, 24f) <= 0) {
+        else if(Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 24f) <= 0) {
             str = "BMI: " + bmi + "\nNORMAL";
         }
         else if(Float.compare(bmi, 24f) > 0 &&Float.compare(bmi, 29f) <= 0) {
